@@ -8,15 +8,15 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 import streamlit as st
 
-# with open("key.json", 'r') as file:
-#     data = json.load(file)
+with open("key.json", 'r') as file:
+    data = json.load(file)
     
 # gemini_api_key = data.get("gemini-key")
 
 # TODO: 아래 YOUR-HUGGINGFACE-API-KEY랑 OUR-GEMINI-API-KEY에 자기꺼 넣기
 if not os.environ.get("HUGGINGFACEHUB_API_TOKEN"):
-    os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"    
-gemini_api_key = "AIzaSyBjlRmztz0UwC72POGDydey2DMChokSKZU"
+    os.environ["HUGGINGFACEHUB_API_TOKEN"] = "YOUR-API-KEY"    
+gemini_api_key = "YOUR-API-KEY"
 
 genai.configure(api_key=gemini_api_key)
 
